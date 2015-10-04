@@ -42,6 +42,11 @@ angular
             }
         };
 
+        $scope.getYear = function(){
+            var a = new Date();
+            return a.getFullYear();
+        };
+
         $interval(function () {
         }, 1000)
     });

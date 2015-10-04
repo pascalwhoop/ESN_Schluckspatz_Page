@@ -136,24 +136,27 @@
             <header>
                 <h2>Contact us</h2>
             </header>
-            <form action="#" method="post">
+            {{contact}}
+            <form>
                 <div>
                     <div class="row">
                         <div class="6u 12u$(mobile)">
-                            <input type="text" name="name" placeholder="Name"/>
+                            <input type="text" name="name" placeholder="Name" ng-model="contact.name" required/>
                         </div>
                         <div class="6u$ 12u$(mobile)">
-                            <input type="text" name="email" placeholder="Email"/>
+                            <input type="email" name="email" placeholder="Email" ng-model="contact.email" required/>
                         </div>
                         <div class="12u$">
-                            <input type="text" name="subject" placeholder="Subject"/>
+                            <input type="text" name="subject" placeholder="Subject" ng-model="contact.subject"/>
                         </div>
                         <div class="12u$">
-                            <textarea name="message" placeholder="Message" rows="8"></textarea>
+                            <textarea name="message" placeholder="Message" rows="8" ng-model="contact.message" required></textarea>
                         </div>
                         <div class="12u$">
-                            <input type="button" value="Send Message"/>
+                            <button ng-click="submitContactForm()" class="button" ng-disabled="!contact.email">Send Message</button>
+
                         </div>
+
                     </div>
                 </div>
             </form>
@@ -164,7 +167,7 @@
     <!-- Footer -->
     <div id="footer">
         <ul class="copyright">
-            <li>&copy; ESN Köln.</li>
+            <li>&copy; ESN Köln. {{getYear()}}</li>
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
     </div>
