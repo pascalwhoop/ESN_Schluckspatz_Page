@@ -750,8 +750,8 @@
 		background-image: url("images/overlay.png"), url("images/bg.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
-		font-family: 'Source Sans Pro', sans-serif;
-        /*font-family: 'Indie Flower', cursive;*/
+		/*font-family: 'Source Sans Pro', sans-serif;*/
+        font-family: 'Indie Flower', cursive;
 		font-weight: 300;
 		/*color: #777777;*/
         color: black;
