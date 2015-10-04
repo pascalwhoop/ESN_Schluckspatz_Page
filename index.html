@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+
+<html class="no-js">
+<head>
+    <title>Astral by HTML5 UP</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+</head>
+<body ng-app="schluckspecht">
+
+<!-- Wrapper-->
+<div id="wrapper" ng-controller="SiteController">
+
+    <!-- Nav -->
+    <nav id="nav">
+        <a href="#me" class="icon fa-home active"><span>Home</span></a>
+        <a href="#work" class="icon fa-info"><span>Work</span></a>
+        <a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
+        <a href="https://www.facebook.com/esn.koeln" target="_blank" class="icon fa-facebook"><span>Facebook</span></a>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Me -->
+        <article id="me" class="panel">
+            <header>
+                <h1>Schluckspatz</h1>
+
+                <p>Zeit zum erneuten Zwitschern in: {{getDaysTillParty()}} Tagen <br>und {{timeOfNextParty()|date:
+                    'HH:mm:ss'}} Stunden</p>
+
+                <p></p>
+            </header>
+            <a href="#work" class="jumplink pic">
+                <span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+                <img src="images/me.jpg" alt=""/>
+            </a>
+        </article>
+
+        <!-- Work -->
+        <article id="work" class="panel">
+            <header>
+                <h3>An alle Schluckspätze da draußen!</h3>
+            </header>
+            <div>
+
+
+                <p>Dir gehen grad Sachen wie „Was zur Hölle is'n Schluckspatz?!“, „Diese Idioten wissen nicht, dass das
+                    Schluckspecht heißt!“, „Was für'n neumodischer Scheiß ist das schon wieder?“ durch den Kopf? Umso mehr
+                    ein Grund, dir von uns zeigen zu lassen, was so ein Schluckspatz alles kann!</p>
+
+                <p>Ab (genaues Datum hier) gibt es jeden Mittwoch (außer den ersten im Monat – auch ein Schluckspatz braucht Schönheitsschlaf) ab 21.30 Uhr im Roxy die neue Partyreihe (jap, ihr habt richtig geraten) SCHLUCKSPATZ!</p>
+
+                <p>Wir versorgen euch mit der tanzbarsten Musik, einer unschlagbar zentralen Location, geilen Specials UND einem lustigen Spiel, bei dem ihr ganz easy neue Leute kennenlernen könnt – an der Tür gibt's nämlich für jeden/jedes Schluckspatzler/Schluckspätzchen (nur so ne Idee, dass man die Partygäste der Reihe vllt so nennen könnte? xD) einen Anhänger mit einem Bild. Und weil wir Altbewährtes gut finden, läuft irgendwo im Club noch jemand mit demselben Bildchen herum (Memory lässt grüßen!). Findet ihr euch, dann gibt’s an der Bar je einen Shot GESCHENKT. Wenn das mal nicht geil ist, dann wissen wir auch nicht.</p>
+
+                <p>Noch mal alle Infos auf einen Blick:</p>
+
+                <ul>
+                    <li>Wann? Jeden Mittwoch (außer den 1. im Monat)</li>
+                    <li>Wo: Im Roxy (Aachenerstr. 2, direkt am Rudolfplatz)</li>
+                </ul>
+
+                <p>Specials:</p>
+                <!--<ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>-->
+
+
+
+            </div>
+            <section>
+                <div class="row">
+                    <div class="4u 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+                    </div>
+                    <div class="4u 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
+                    </div>
+                    <div class="4u$ 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
+                    </div>
+                    <div class="4u 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
+                    </div>
+                    <div class="4u 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
+                    </div>
+                    <div class="4u$ 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
+                    </div>
+                    <div class="4u 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
+                    </div>
+                    <div class="4u 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
+                    </div>
+                    <div class="4u$ 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
+                    </div>
+                    <div class="4u 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
+                    </div>
+                    <div class="4u 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
+                    </div>
+                    <div class="4u$ 12u$(mobile)">
+                        <a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Contact -->
+        <article id="contact" class="panel">
+            <header>
+                <h2>Contact us</h2>
+            </header>
+            <form action="#" method="post">
+                <div>
+                    <div class="row">
+                        <div class="6u 12u$(mobile)">
+                            <input type="text" name="name" placeholder="Name"/>
+                        </div>
+                        <div class="6u$ 12u$(mobile)">
+                            <input type="text" name="email" placeholder="Email"/>
+                        </div>
+                        <div class="12u$">
+                            <input type="text" name="subject" placeholder="Subject"/>
+                        </div>
+                        <div class="12u$">
+                            <textarea name="message" placeholder="Message" rows="8"></textarea>
+                        </div>
+                        <div class="12u$">
+                            <input type="button" value="Send Message"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </article>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <ul class="copyright">
+            <li>&copy; ESN Köln.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/skel-viewport.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/angular/angular.js"></script>
+<script src="assets/js/SiteController.js"></script>
+
+</body>
+</html>
