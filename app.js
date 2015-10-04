@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 /*our REST API Routes*/
-app.use('/api/formsubmit', formsubmit);
+app.use('/api/contact', formsubmit);
 
 /**
  * host the mobile app as static files

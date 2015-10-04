@@ -11,12 +11,13 @@ angular
         $scope.submitContactForm = function () {
             $http.post("/api/contact", $scope.contact)
                 .then(function (response) {
-
+                    console.log(response);
+                    $scope.contact = {};
                 }, function (errResponse) {
 
                 });
 
-            $scope.contact = {};
+
         };
 
         var HOUR_OF_PARTY = 21;
