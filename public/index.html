@@ -35,15 +35,15 @@
         <!-- Me -->
         <article id="me" class="panel">
             <header>
-                <h1>Schluckspatz</h1>
+                <h1 id="meHeader">Schluckspatz</h1>
 
-                <p>Zeit zum erneuten Zwitschern in: {{getDaysTillParty()}} Tagen <br>und {{timeOfNextParty()|date:
+                <p id="meTimeleft1">Zeit zum erneuten Zwitschern in: <br><span style="font-weight: 600;">{{getDaysTillParty()}} Tagen</span></p> <p id="meTimeleft2" >und {{timeOfNextParty()|date:
                     'HH:mm:ss'}} Stunden</p>
 
             </header>
             <a href="#work" class="jumplink pic">
                 <span class="arrow icon fa-chevron-right"><span>See my work</span></span>
-                <img src="images/me.jpg" alt=""/>
+                <!--<img src="images/schluckspatz_logo.png" alt=""/>-->
             </a>
         </article>
 
