@@ -24,110 +24,75 @@
     <!-- Nav -->
     <nav id="nav">
         <a href="#me" class="icon fa-clock-o active"><span>Home</span></a>
-        <a href="#work" class="icon fa-info"><span>Work</span></a>
+        <a href="#description" class="icon fa-info"><span>Work</span></a>
         <a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
         <a href="https://www.facebook.com/esn.koeln" target="_blank" class="icon fa-facebook"><span>Facebook</span></a>
     </nav>
 
     <!-- Main -->
-    <div id="main">
+    <div id="main" class="spatz-turkis">
 
         <!-- Me -->
         <article id="me" class="panel">
             <header>
                 <h1 id="meHeader">Schluckspatz</h1>
 
-                <p id="meTimeleft1">Zeit zum erneuten Zwitschern in: <br><span style="font-weight: 600;">{{getDaysTillParty()}} Tagen</span></p> <p id="meTimeleft2" >und {{timeOfNextParty()|date:
+                <p id="meTimeleft1">Zeit zum erneuten Zwitschern in: <br><span style="font-weight: 600;">{{dayDiffToNextParty()}} Tag<span
+                        ng-if="dayDiffToNextParty()>1">en</span></span>
+                </p>
+
+                <p id="meTimeleft2">und {{timeOfNextParty()|date:
                     'HH:mm:ss'}} Stunden</p>
 
             </header>
-            <a href="#work" class="jumplink pic">
+            <a href="description" class="jumplink pic">
                 <span class="arrow icon fa-chevron-right"><span>See my work</span></span>
                 <!--<img src="images/schluckspatz_logo.png" alt=""/>-->
             </a>
         </article>
 
-        <!-- Work -->
-        <article id="work" class="panel">
+        <!-- description -->
+        <article id="description" class="panel spatz-turkis">
+            <img src="images/schluckspatz_logo.png" class="img-right" alt="">
+
             <header>
-                <h3>An alle Schluckspätze da draußen!</h3>
+                <h3>He all ihr Schluckspätze da draußen!</h3>
             </header>
-            <div>
+            <!--<img class="banner" src="images/schluckspatz_final1-09.png" alt="">-->
 
 
-                <p>Dir gehen grad Sachen wie „Was zur Hölle is'n Schluckspatz?!“, „Diese Idioten wissen nicht, dass das
-                    Schluckspecht heißt!“, „Was für'n neumodischer Scheiß ist das schon wieder?“ durch den Kopf? Umso
-                    mehr
-                    ein Grund, dir von uns zeigen zu lassen, was so ein Schluckspatz alles kann!</p>
+            <p>Dir gehen grad Sachen wie „Was zur Hölle is'n Schluckspatz?!“, „Diese Idioten wissen nicht, dass das
+                Schluckspecht heißt!“, „Was für'n neumodischer Scheiß ist das schon wieder?“ durch den Kopf? Umso
+                mehr
+                ein Grund, dir von uns zeigen zu lassen, was so ein Schluckspatz alles kann!</p>
 
-                <p>Ab (genaues Datum hier) gibt es jeden Mittwoch (außer den ersten im Monat – auch ein Schluckspatz
-                    braucht Schönheitsschlaf) ab 21.30 Uhr im Roxy die neue Partyreihe (jap, ihr habt richtig geraten)
-                    SCHLUCKSPATZ!</p>
+            <p>Ab 21.10 gibt es jeden Mittwoch (außer den ersten im Monat – auch ein Schluckspatz
+                braucht Schönheitsschlaf) ab 21.30 Uhr im Roxy die neue Partyreihe (jap, ihr habt richtig geraten)
+                SCHLUCKSPATZ!</p>
 
-                <p>Wir versorgen euch mit der tanzbarsten Musik, einer unschlagbar zentralen Location, geilen Specials
-                    UND einem lustigen Spiel, bei dem ihr ganz easy neue Leute kennenlernen könnt – an der Tür gibt's
-                    nämlich für jeden/jedes Schluckspatzler/Schluckspätzchen (nur so ne Idee, dass man die Partygäste
-                    der Reihe vllt so nennen könnte? xD) einen Anhänger mit einem Bild. Und weil wir Altbewährtes gut
-                    finden, läuft irgendwo im Club noch jemand mit demselben Bildchen herum (Memory lässt grüßen!).
-                    Findet ihr euch, dann gibt’s an der Bar je einen Shot GESCHENKT. Wenn das mal nicht geil ist, dann
-                    wissen wir auch nicht.</p>
+            <p>Wir versorgen euch mit der tanzbarsten Musik, einer unschlagbar zentralen Location, geilen Specials
+                UND einem lustigen Spiel, bei dem ihr ganz easy neue Leute kennenlernen könnt – an der Tür gibt's
+                nämlich für jeden/jedes Schluckspatzler / Schluckspätzchen einen Anhänger mit einem Bild. Und weil wir
+                Altbewährtes gut finden, läuft irgendwo im Club noch jemand mit demselben Bildchen herum (Memory lässt
+                grüßen!). Findet ihr euch, dann gibt’s an der Bar je einen Shot geschenkt. Cool? Finden wir auch!</p>
 
-                <p>Noch mal alle Infos auf einen Blick:</p>
+            <p>Noch mal für Leute mit kurzer Aufmerksamkeitsspanne alle Infos auf einen Blick:</p>
 
-                <ul>
-                    <li>Wann? Jeden Mittwoch (außer den 1. im Monat)</li>
-                    <li>Wo: Im Roxy (Aachenerstr. 2, direkt am Rudolfplatz)</li>
-                </ul>
+            <ul>
+                <li>Wann? Jeden Mittwoch (außer den 1. im Monat)</li>
+                <li>Wo: Im Roxy (Aachenerstr. 2, direkt am Rudolfplatz)</li>
+                <li>Von wem? ESN Köln (link)</li>
+                <li>Und das beste: <span class="thick">Nicht gewinnorientiert</span>! Genau, wir sind nämlich ein Verein. Puff, da staunt ihr was!</li>
+            </ul>
 
-                <p>Specials:</p>
-                <!--<ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>-->
+            <!--<p>Specials:</p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>-->
 
 
-            </div>
-            <section>
-                <div class="row">
-                    <div class="4u 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
-                    </div>
-                    <div class="4u 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
-                    </div>
-                    <div class="4u$ 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
-                    </div>
-                    <div class="4u 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
-                    </div>
-                    <div class="4u 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
-                    </div>
-                    <div class="4u$ 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
-                    </div>
-                    <div class="4u 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
-                    </div>
-                    <div class="4u 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
-                    </div>
-                    <div class="4u$ 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
-                    </div>
-                    <div class="4u 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
-                    </div>
-                    <div class="4u 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
-                    </div>
-                    <div class="4u$ 12u$(mobile)">
-                        <a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
-                    </div>
-                </div>
-            </section>
         </article>
 
         <!-- Contact -->
@@ -148,10 +113,13 @@
                             <input type="text" name="subject" placeholder="Subject" ng-model="contact.subject"/>
                         </div>
                         <div class="12u$">
-                            <textarea name="message" placeholder="Message" rows="8" ng-model="contact.message" required></textarea>
+                            <textarea name="message" placeholder="Message" rows="8" ng-model="contact.message"
+                                      required></textarea>
                         </div>
                         <div class="12u$">
-                            <button ng-click="submitContactForm()" class="button" ng-disabled="!contact.email">Send Message</button>
+                            <button ng-click="submitContactForm()" class="button" ng-disabled="!contact.email">Send
+                                Message
+                            </button>
 
                         </div>
 

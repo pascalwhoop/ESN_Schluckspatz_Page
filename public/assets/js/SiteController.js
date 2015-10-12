@@ -20,29 +20,32 @@ angular
 
         };
 
-        var HOUR_OF_PARTY = 21;
-        var DAY_OF_PARTY = 3;
-
         $scope.timeOfNextParty = function () {
             var now = new Date();
-            var next = new Date();
-            next.setHours(HOUR_OF_PARTY);
-            next.setMinutes(0);
-            next.setSeconds(0);
+            var next = getNextPartyDate();
             return new Date(next.getTime() - now.getTime());
 
         };
 
-        $scope.getDaysTillParty = function () {
-            var date = new Date();
-            if (date.getDay() < DAY_OF_PARTY) {
-                return DAY_OF_PARTY - date.getDay();
-            } else {
-                return DAY_OF_PARTY - date.getDay() + 7;
-            }
+        var getNextPartyDate = function () {
+            var now = new Date();
+            var wed = new Date();
+            wed.setDate(now.getDate() - now.getDay() + 3); // Make Sunday
+            wed.setHours(21); // Set 11am
+            wed.setMinutes(0);
+            wed.setSeconds(0);
+            if (wed < now) wed.setDate(wed.getDate() + 7); // Make sure it's future
+            if (wed.getDate() < 7) wed.setDate(wed.getDate() + 7); // make sure its not the first wed in the month
+            return wed;
         };
 
-        $scope.getYear = function(){
+        $scope.dayDiffToNextParty = function () {
+            var time = Math.floor(((getNextPartyDate() - new Date()) / 1000 / 60 / 60 / 24));
+            return time;
+        };
+
+
+        $scope.getYear = function () {
             var a = new Date();
             return a.getFullYear();
         };
