@@ -443,11 +443,7 @@ ol.default li {
     width: 100%;
 }
 
-#description .img-right{
-    width: 350px;
-    float: right;
 
-}
 
 /* Footer */
 
@@ -528,6 +524,8 @@ ol.default li {
     header {
         margin: 0 0 1.5em 0;
     }
+
+
 
     header > p {
         margin: 0.5em 0 0 0;
@@ -823,6 +821,21 @@ ol.default li {
 
 }
 
+/*not mobile anymore hybrid*/
+@media screen and (min-width: 530px){
+    #description .spatzLogo {
+        width: 350px;
+        float: right;
+    }
+}
+
+/*mobile hybrid*/
+@media screen and (max-width: 530px){
+    #description .spatzLogo {
+        width: 100%;
+    }
+}
+
 /* Mobile */
 
 @media screen and (max-width: 736px) {
@@ -844,6 +857,9 @@ ol.default li {
     }
 
     /* Section/Article */
+
+
+
     header {
         margin: 0 0 1.5em 0;
     }
