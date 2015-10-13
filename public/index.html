@@ -26,7 +26,8 @@
         <a href="#me" class="icon fa-clock-o active"><span>Home</span></a>
         <a href="#description" class="icon fa-info"><span>Work</span></a>
         <a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
-        <a href="https://www.facebook.com/schluckspatz" target="_blank" class="icon fa-facebook"><span>Facebook</span></a>
+        <a href="https://www.facebook.com/schluckspatz" target="_blank"
+           class="icon fa-facebook"><span>Facebook</span></a>
     </nav>
 
     <!-- Main -->
@@ -82,7 +83,9 @@
                 <li>Wann? Jeden Mittwoch (außer den 1. im Monat)</li>
                 <li>Wo: Im Roxy (Aachenerstr. 2, direkt am Rudolfplatz)</li>
                 <li>Von wem? ESN Köln (link)</li>
-                <li>Und das beste: <span class="thick">wir agieren gemeinnützig</span>! Genau, wir sind nämlich ein Verein. Puff, da staunt ihr was!</li>
+                <li>Und das beste: <span class="thick">wir agieren gemeinnützig</span>! Genau, wir sind nämlich ein
+                    Verein. Puff, da staunt ihr was!
+                </li>
             </ul>
 
             <!--<p>Specials:</p>
@@ -135,8 +138,34 @@
         <ul class="copyright">
             <li>&copy; ESN Köln. {{getYear()}}</li>
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li><a ng-click="impressum = !impressum">impressum</a></li>
         </ul>
     </div>
+
+    <article id="impressum" class="panel" ng-show="impressum" ng-click="impressum = !impressum">
+        <header>
+            <h2>Impressum</h2>
+        </header>
+
+        <div>
+            Erasmus Student Network Köln
+            <br>
+            Universität zu Köln
+            <br>
+            Universitätsstraße 22a
+            <br>
+            50937 Köln
+            <br><br>
+
+
+            Studenteninitiative an der Universität zu Köln
+            <br>
+            Vorsitzender: Denis Dunkel
+            <br>
+            Email: denisdunkel@gmail.com
+        </div>
+
+    </article>
 
 </div>
 
