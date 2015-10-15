@@ -43,7 +43,7 @@ angular
             var time = Math.floor(((getNextPartyDate() - new Date()) / 1000 / 60 / 60 / 24));
 
             //here to change if party is not when planned
-            if(time < 3) time += 7;
+            //if(time < 3) time += 7;
             return time;
         };
 
