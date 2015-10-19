@@ -3,7 +3,7 @@
 angular
     .module('schluckspecht', [])
 
-    .controller('SiteController', function ($scope, $interval, $http) {
+    .controller('SiteController', function ($scope, $interval, $http, $anchorScroll, $location) {
         $scope.timeTillNextParty = new Date();
 
         $scope.contact = {};
@@ -52,6 +52,18 @@ angular
             var a = new Date();
             return a.getFullYear();
         };
+
+        $scope.impressum = function(){
+            $location.hash('impressum');
+            $scope.impressumVis = true;
+            $anchorScroll();
+        };
+
+        $scope.noImpressum = function(){
+            $location.hash('');
+            $scope.impressumVis = false;
+            $anchorScroll();
+        }
 
         $interval(function () {
         }, 1000)

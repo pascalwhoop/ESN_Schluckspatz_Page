@@ -62,8 +62,6 @@
             <header>
                 <h3>He all ihr Schluckspatze da draußen!</h3>
             </header>
-            <!--<img class="banner" src="images/schluckspatz_final1-09.png" alt="">-->
-
 
             <p>Dir gehen grad Sachen wie „Was zur Hölle is'n Schluckspatz?!“, „Diese Idioten wissen nicht, dass das Schluckspecht heißt!“, „Was für'n neumodischer Scheiß ist das schon wieder?“ durch den Kopf? Umso mehr ein Grund, dir von uns zeigen zu lassen, was so ein Schluckspatz alles kann!</p>
 
@@ -142,11 +140,12 @@ Oh and there will be dancing so leave them granny panties at home ;)
         <ul class="copyright">
             <li>&copy; ESN Köln. {{getYear()}}</li>
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            <li><a ng-click="impressum = !impressum">impressum</a></li>
+            <!--<li><a ng-click="impressum = !impressum" ng-click="impressum()">impressum</a></li>-->
+            <li><a ng-click="impressum()">impressum</a></li>
         </ul>
     </div>
 
-    <article id="impressum" class="panel" ng-show="impressum" ng-click="impressum = !impressum">
+    <article id="impressum" class="panel" ng-show="impressumVis" ng-click="noImpressum()">
         <header>
             <h2>Impressum</h2>
         </header>
